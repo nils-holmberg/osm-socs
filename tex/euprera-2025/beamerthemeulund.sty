@@ -1,0 +1,222 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{beamerthemeulund}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Inner related
+%% title image color
+\def\titleimagecolor#1{\def\titleimage@color{#1}}
+\titleimagecolor{gray}
+\DeclareOptionBeamer{titleimagecolor}{\titleimagecolor{#1}}% blue,darkgray,gray,green,red
+% \DeclareOptionBeamer{titleimagecolor}[gray]{%
+%   \PassOptionsToPackage{titleimagecolor=#1}{beamerinnerthemeulund}
+% }
+%%   title image margin
+\newdimen\titleimagemargin
+\titleimagemargin=2mm
+\DeclareOptionBeamer{titleimagemargin}{\titleimagemargin=#1}% Frame width, recommended less than 2mm [default=2mm]
+% non-LU title image
+\def\titleimage#1{\def\titleimage@nonlu{#1}}
+\let\titleimage@nonlu\@empty
+% \DeclareOptionBeamer{titleimagemargin}{%
+%   \PassOptionsToPackage{titleimagemargin=#1}{beamerinnerthemeulund}
+% }
+
+%% Print logo in foot?
+\newif\ifulund@printlogo\ulund@printlogotrue%% Default with logo in foot
+\def\ulund@footlineind{10mm}
+\DeclareOptionBeamer{footlogo}[true]{%
+  \csname ulund@printlogo#1\endcsname%
+  \ifulund@printlogo
+  \def\ulund@footlineind{10mm}
+  \else
+  \def\ulund@footlineind{0mm}
+  \fi%
+}
+
+%%   Logo
+\def\ulund@logo{LU}%% default
+\DeclareOptionBeamer{logo}{\def\ulund@logo{#1}}
+\def\ulundiflogo#1#2{% if \ulund@logo=#1 do #2
+  \def\ulund@logocmp{#1}
+  \ifx\ulund@logocmp\ulund@logo
+  #2
+  \fi
+}
+%% LTHlogo  -- Obsolete, keep for comapatibility
+\newif\ifulund@LTHlogo\ulund@LTHlogofalse%% Default LU logo
+\DeclareOptionBeamer{LTHlogo}[true]{%
+  \csname ulund@LTHlogo#1\endcsname
+  \ifulund@LTHlogo
+  \def\ulund@logo{LTH}
+  \else
+  \def\ulund@logo{LU}
+  \fi
+}
+
+%% Logocol
+\def\ulund@logocol{RGB}%% default
+\DeclareOptionBeamer{logocol}{\def\ulund@logocol{#1}}
+\def\ulundiflogocol#1#2{% if \ulund@logo=#1 do #2
+  \def\ulund@logocolcmp{#1}
+  \ifx\ulund@logocolcmp\ulund@logocol
+  #2
+  \fi
+}
+%% logoBW  -- Obsolete, keep for comapatibility
+\newif\ifulund@logoBW\ulund@logoBWfalse%% Default colorful logo
+\DeclareOptionBeamer{logoBW}[true]{\csname ulund@logoBW#1\endcsname
+  \ifulund@logoBW
+  \def\ulund@logocol{BW}
+  \else
+  \def\ulund@logocol{RGB}
+  \fi
+}
+
+%%   logolang {eng/swe}
+\def\ulund@logolang{eng}%% default
+\DeclareOptionBeamer{logolang}{\def\ulund@logolang{#1}}
+\def\ulundiflogolang#1#2{% if \ulund@logolang=#1 do #2
+  \def\ulund@logolangcmp{#1}
+  \ifx\ulund@logolangcmp\ulund@logolang
+  #2
+  \fi
+}
+%% english  -- Obsolete, keep for comapatibility
+\newif\ifulund@english\ulund@englishtrue%% Default English
+\DeclareOptionBeamer{english}[true]{%
+  \csname ulund@english#1\endcsname
+  \ifulund@english
+  \def\ulund@logolang{eng}
+  \else
+  \def\ulund@logolang{swe}
+  \fi
+}
+
+%% LU Seal
+\newif\ifulund@LUseal\ulund@LUsealtrue%% Seal in lower right corner of title and section slides
+\DeclareOptionBeamer{LUseal}[true]{\csname ulund@LUseal#1\endcsname}
+
+%% LTH background
+\newif\ifulund@LTHbg\ulund@LTHbgfalse%% LTH background
+\DeclareOptionBeamer{LTHbg}[true]{\csname ulund@LTHbg#1\endcsname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Outer related
+%% navigation symbols
+\newif\ifulund@navigationsymbols\ulund@navigationsymbolsfalse%% Default false (off)
+\DeclareOptionBeamer{navigationsymbols}[true]{\csname ulund@navigationsymbols#1\endcsname}
+% \DeclareOptionBeamer{navigationsymbols}[true]{%
+%   \PassOptionsToPackage{navigationsymbols=#1}{beamerouterthemeulund}
+% }
+%% Footer
+\newif\ifulund@foot\ulund@footfalse% Use foot. Default false
+\DeclareOptionBeamer{foot}[true]{\csname ulund@foot#1\endcsname}
+% \DeclareOptionBeamer{foot}[true]{%
+%   \PassOptionsToPackage{foot=#1}{beamerouterthemeulund}
+% }
+%% Keep slide num in footer even if foot=false
+\newif\ifulund@nofootslidenum\ulund@nofootslidenumtrue% Default no slide num
+\DeclareOptionBeamer{slidenumnofoot}[true]{\csname ulund@nofootslidenum#1\endcsname}
+%% Footer
+% \DeclareOptionBeamer{nofootslidenum}[true]{%
+%   \PassOptionsToPackage{nofootslidenum=#1}{beamerouterthemeulund}
+% }
+
+%% Use section frames
+\newif\ifulund@sectionframe\ulund@sectionframetrue% Default use section frames
+\DeclareOptionBeamer{sectionframe}[true]{\csname ulund@sectionframe#1\endcsname}
+% \DeclareOptionBeamer{sectionframe}[true]{%
+%   \PassOptionsToPackage{sectionframe=#1}{beamerouterthemeulund}
+% }
+
+%% Line under title
+\newif\ifulund@titleline\ulund@titlelinefalse
+\DeclareOptionBeamer{titleline}[true]{\csname ulund@titleline#1\endcsname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Font related
+% math serif font
+\newif\ifulund@mathseriffont\ulund@mathseriffontfalse%% Default ulund off
+\DeclareOptionBeamer{mathseriffont}[true]{\csname ulund@mathseriffont#1\endcsname}
+% Palatino, Helvetica, Garamond and Curier
+\newif\ifulund@defaultfont\ulund@defaultfontfalse
+\DeclareOptionBeamer{defaultfont}[true]{\csname ulund@defaultfont#1\endcsname}
+% %% math serif font
+% \DeclareOptionBeamer{mathseriffont}[true]{%
+%   \PassOptionsToPackage{mathseriffont=#1}{beamerfontthemeulund}
+% }
+% \DeclareOptionBeamer{defaultfont}[true]{%
+%   \PassOptionsToPackage{defaultfont=#1}{beamerfontthemeulund}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Color related
+% % enumeration itemmarks
+% \DeclareOptionBeamer{blackenumeratenumber}[true]{%
+%   \PassOptionsToPackage{blackenumeratenumber=#1}{beamercolorthemeulund}
+% }
+% % itemize itemmarks
+% \DeclareOptionBeamer{blackitemmark}[true]{%
+%   \PassOptionsToPackage{blackitemmark=#1}{beamercolorthemeulund}
+% }
+% enumeration itemmarks
+\newif\ifulund@blackenumeratenumber\ulund@blackenumeratenumbertrue
+\DeclareOptionBeamer{blackenumeratenumber}[true]{\csname ulund@blackenumeratenumber#1\endcsname}
+% itemize itemmarks
+\newif\ifulund@blackitemmark\ulund@blackitemmarkfalse
+\DeclareOptionBeamer{blackitemmark}[true]{\csname ulund@blackitemmark#1\endcsname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Direct options
+%% Align text to center/top of slide
+\beamer@centeredfalse
+\DeclareOptionBeamer{centeralign}[false]{\csname beamer@centered#1\endcsname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% LTH template
+\newif\ifulund@LTHtemplate\ulund@LTHtemplatefalse
+\DeclareOptionBeamer{LTHtemplate}[true]{\csname ulund@LTHtemplate#1\endcsname}
+% overrides and sets (below, after Options are pocessed)
+%% logo = LTH
+%% footlogo=false
+%% LUseal = false
+%% LTHbg = true
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Process options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProcessOptionsBeamer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  Settings for LTH template
+\ifulund@LTHtemplate
+%% logo = LTH
+\def\ulund@logo{LTH}
+%% footlogo=false
+\ulund@printlogofalse
+\def\ulund@footlineind{0mm}
+%% LUseal = false
+\ulund@LUsealfalse
+%% LTHbg = true
+\ulund@LTHbgtrue
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Packages
+%\PassOptionsToPackage{cmyk}{xcolor}% Not needed, ok with cmyk anyway.
+\RequirePackage{tikz}
+%\graphicspath{{./Pictures/}}
+\usetikzlibrary{calc,positioning}
+\RequirePackage{relsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Call the other beamer packages
+\useinnertheme{ulund}
+\useoutertheme{ulund}
+\usecolortheme{ulund}
+\usefonttheme{ulund}
+
+
+
+
+\mode<all>
+

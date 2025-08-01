@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{beamerinnerthemeulund}
+\mode<presentation>
+
+% Color of title image (default gray)
+% % Other title image
+% \def\titleimage#1{\def\titleimage@nonlu{#1}}
+% \let\titleimage@nonlu\@empty
+% Margins and stuff
+% \newdimen\titleimagemargin
+% \titleimagemargin=2mm
+
+%%%%%%%%% Options
+%% Title image
+% \def\titleimagecolor#1{\def\titleimage@color{#1}}
+% \titleimagecolor{gray}
+% \DeclareOptionBeamer{titleimagecolor}{\titleimagecolor{#1}}% blue,darkgray,gray,green,red
+% \DeclareOptionBeamer{titleimagemargin}{\titleimagemargin=#1}% Distance, recommended less than 2mm [default=2mm]
+
+% %% Print logo in foot?
+% \newif\ifulund@printlogo\ulund@printlogotrue%% Default with logo in foot
+% \def\ulund@footlineind{10mm}
+% \DeclareOptionBeamer{footlogo}[true]{%
+%   \csname ulund@printlogo#1\endcsname%
+%   \ifulund@printlogo
+%   \def\ulund@footlineind{10mm}
+%   \else
+%   \def\ulund@footlineind{0mm}
+%   \fi%
+% }
+%%
+% \ProcessOptionsBeamer
+
+%%%%%%%%% Set the path to logo     ------- NEW ------
+%% Default LU, eng, BW
+% \def\ulund@logopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_BLACK}%{Pictures/lulogo-en} %% Logo in foot
+% \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_BLACK}%{Pictures/LTH_Logo_en} %% Logo on top left of title page
+% \def\ulund@endlogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_BLACK}%{Pictures/LTH_Logo_en} %% Logo on end page
+%%
+\def\ulund@displaylogoheight{60}%% Height on left corner, title page
+\def\ulund@displaylogoxshift{0}%{-4}
+\def\ulund@displaylogoyshift{0}%{8}
+\def\ulund@displaylogoscale{0.7}%% scale on end page. 
+%%%%%% Select logo on title and ending page
+%% footer logo
+\ulundiflogolang{eng}{% English
+  \ulundiflogocol{BW}{\def\ulund@logopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_BLACK}}
+  \ulundiflogocol{RGB}{\def\ulund@logopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB}}
+  \ulundiflogocol{neg}{\def\ulund@logopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB}}
+}
+\ulundiflogolang{swe}{% Swedish  
+  \ulundiflogocol{BW}{\def\ulund@logopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_SVART}}
+  \ulundiflogocol{RGB}{\def\ulund@logopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_RGB}}
+  \ulundiflogocol{neg}{\def\ulund@logopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_RGB}}
+}
+\ulundiflogo{LU}{%  -------- LU --------
+  \ulundiflogolang{eng}{% English
+    \ulundiflogocol{BW}{%% Eng, B/W
+      \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_BLACK}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_BLACK}%% End page logo
+    }
+    \ulundiflogocol{RGB}{%% Eng, RGB
+      \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB}%% End page logo
+    }
+    \ulundiflogocol{neg}{%% Eng, neg
+      \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_NEG}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB}%% End page logo
+    }
+  }
+  \ulundiflogolang{swe}{% Swedish  
+    \ulundiflogocol{BW}{%% Swe, B/W
+      \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_SVART}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_SVART}%% End page logo
+    }
+    \ulundiflogocol{RGB}{%% Swe, RGB
+      \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_RGB}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_RGB}%% End page logo
+    }
+    \ulundiflogocol{neg}{%% Swe, neg
+      \def\ulund@displaylogopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_NEG}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LU–tvaradig–digital/Sv/Lunds_universitet_C2r_RGB}%% End page logo
+    }
+  }
+}% LU end
+\ulundiflogo{LTH}{%  -------- LTH --------
+  \def\ulund@displaylogoscale{0.5}%% scale on end page
+  \ulundiflogolang{eng}{% English
+    \ulundiflogocol{BW}{%% Eng, B/W
+      \def\ulund@displaylogopath{logo/LTH-digital/Engelska/LTH_BLACK_ENG}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LTH-digital/Engelska/LTH_BLACK_ENG}%% End page logo
+    }
+    \ulundiflogocol{RGB}{%% Eng, RGB
+      \def\ulund@displaylogopath{logo/LTH-digital/Engelska/LTH_RGB_ENG}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LTH-digital/Engelska/LTH_RGB_ENG}%% End page logo
+    }
+    \ulundiflogocol{neg}{%% Eng, neg
+      \def\ulund@displaylogopath{logo/LTH-digital/Engelska/LTH_NEG_ENG}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LTH-digital/Engelska/LTH_RGB_ENG}%% End page logo
+    }
+  }% English end
+  \ulundiflogolang{swe}{% Swedish
+    \ulundiflogocol{BW}{%% Swe, B/W
+      \def\ulund@displaylogopath{logo/LTH-digital/Svenska/LTH_BLACK_SV}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LTH-digital/Svenska/LTH_BLACK_SV}%% End page logo
+    }
+    \ulundiflogocol{RGB}{%% Swe, RGB
+      \def\ulund@displaylogopath{logo/LTH-digital/Svenska/LTH_RGB_SV}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LTH-digital/Svenska/LTH_RGB_SV}%% End page logo
+    }
+    \ulundiflogocol{neg}{%% Swe, neg
+      \def\ulund@displaylogopath{logo/LTH-digital/Svenska/LTH_NEG_SV}%% Titlepage logo
+      \def\ulund@endlogopath{logo/LTH-digital/Svenska/LTH_RGB_SV}%% End page logo
+    }
+  }% Swedish end
+}% LTH end
+
+
+
+
+
+%%%%%%%%% Set the path to logo     ------ OLD -----
+%% \ulundiflogo{LU}{--LU--}
+%% \ulundiflogo{LTH}{--LTH--}
+%%     \ifulund@english
+%%         \ifulund@color  --- finns nog inte än
+% \ifulund@english
+%   \def\ulund@logopath{Pictures/lulogo-en}
+%   \ifulund@LTHlogo
+%     \def\ulund@displaylogopath{Pictures/LTH_Logo_en}
+%     \def\ulund@displaylogoheight{60}
+%     \def\ulund@displaylogoxshift{-4}
+%     \def\ulund@displaylogoyshift{8}
+%     \def\ulund@displaylogoscale{0.75}
+%   \else
+%     \def\ulund@displaylogopath{Pictures/lulogo-en}
+%     \def\ulund@displaylogoheight{47}
+%     \def\ulund@displaylogoxshift{0}
+%     \def\ulund@displaylogoyshift{0}
+%     \def\ulund@displaylogoscale{0.75}
+%   \fi
+% \else
+%   \def\ulund@logopath{Pictures/lulogo-sv}
+%   \ifulund@LTHlogo
+%     \def\ulund@displaylogopath{Pictures/LTH_Logotyp_sv}
+%     \def\ulund@displaylogoheight{96}
+%     \def\ulund@displaylogoxshift{-16}
+%     \def\ulund@displaylogoyshift{23}
+%     \def\ulund@displaylogoscale{1.1}
+%   \else
+%     \def\ulund@displaylogopath{Pictures/lulogo-sv}
+%     \def\ulund@displaylogoheight{47}
+%     \def\ulund@displaylogoxshift{0}
+%     \def\ulund@displaylogoyshift{0}
+%     \def\ulund@displaylogoscale{0.75}
+%   \fi
+% \fi  
+
+
+%%%%%%%%
+% Make title page
+\newlength{\picwidth}
+\defbeamertemplate*{title page}{ulund}[1][]{%
+  \vskip0pt plus 1filll%
+  \begin{tikzpicture}[overlay]
+    \coordinate (lowerleft) at (-1in-\oddsidemargin+\titleimagemargin,\titleimagemargin);
+    \path (lowerleft) -- +(\paperwidth-2\titleimagemargin,\paperheight-2\titleimagemargin) coordinate (upperright);
+    \coordinate (lowerright) at (lowerleft -| upperright);
+    \coordinate (upperleft) at (lowerleft |- upperright);
+    \begin{scope}
+      \clip (lowerleft) rectangle (upperright);
+      \ifx\empty\titleimage@nonlu{%
+        \node[anchor=south west,inner sep=0pt] at (lowerleft) {%
+          \includegraphics[height=\dimexpr\paperheight-2\titleimagemargin\relax]{%
+            Pictures/titlepictureLU\titleimage@color}};
+      }\else{% Custom image. Align bottom left corner and scale so it fills the page, keeping the aspect ratio
+        \settowidth{\picwidth}{\includegraphics[height=\dimexpr\paperheight-2\titleimagemargin\relax]{\titleimage@nonlu}}
+        \ifdim\picwidth<\paperwidth
+        \node[anchor=south west,inner sep=0pt] at (lowerleft) {% 
+          \includegraphics[width=\dimexpr\paperwidth-2\titleimagemargin\relax]{%
+            \titleimage@nonlu}};
+        \else
+        \node[anchor=south west,inner sep=0pt] at (lowerleft) {%
+          \includegraphics[height=\dimexpr\paperheight-2\titleimagemargin\relax]{%
+            \titleimage@nonlu}};
+        \fi
+      }\fi
+      \node[anchor=north west,inner sep=0pt] at ($(upperleft)+(0.4,-0.2)+(\ulund@displaylogoxshift pt,\ulund@displaylogoyshift pt)$) {%
+        \includegraphics[height=\ulund@displaylogoheight pt]{\ulund@displaylogopath}};%%%%%%%%%%%%%%%%%%%%%
+      \node[anchor=north east,
+        color=white,draw,fill=white,
+        inner sep=3mm,text width=0.55\paperwidth,% 0.63
+        xshift=1pt,
+        text=lundbronze] (titlebox) at ($(upperright)!0.2!(lowerright)$){\usebeamerfont{title}\inserttitle};
+      \node[anchor=north west,
+        color=white,draw,fill=white,
+        inner sep=3mm,text width=0.55\paperwidth,
+        yshift=2pt,
+        text=lundbronze] (authorbox) at (titlebox.south west) {\usebeamerfont{author}\insertauthor};
+      \draw[color=lundbronze,thin]($(titlebox.south west)+(3mm,0)$) -- (titlebox.south east);
+    \end{scope}
+    \ifulund@LUseal
+      \node[anchor=north west,inner sep=0pt] at ($(lowerright)+(-3.85,3.3)$) {%
+        \includegraphics[width=55mm]{logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB}};% Sigill lower right corner
+    \fi
+  \end{tikzpicture}%
+  \addtocounter{framenumber}{-1}
+}
+
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+    \ifulund@LTHbg
+      \fill[LTHgrey] (\titleimagemargin, \titleimagemargin) rectangle (\paperwidth-\titleimagemargin,\paperheight-\titleimagemargin);
+    \fi
+    \ifulund@printlogo
+      \node[anchor=south east,inner sep=0pt] at (\paperwidth-5mm,4mm){%  LU logo in footer
+        \includegraphics[height=13mm]{\ulund@logopath}};
+    \fi
+  \end{tikzpicture}
+}
+
+%%%% Items and stuff
+% Itemize
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{itemize subsubitem}{>>}
+% Enumerate
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{enumerate subitems}[default]
+\setbeamertemplate{enumerate subsubitems}[default]
+
+
+

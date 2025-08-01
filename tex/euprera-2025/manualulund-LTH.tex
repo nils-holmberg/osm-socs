@@ -1,0 +1,500 @@
+\DocumentMetadata
+{
+  testphase = phase-I, % tagging without paragraph tagging
+  % testphase = phase-II, % tagging with paragraph tagging
+  % testphase = phase-III, % tagging with paragraph sec, toc, blocks and more
+  pdfversion = 2.0, % pdfversion must be set here.
+  pdfstandard=ua-2, % pdfstandard can be set too
+}
+\documentclass[aspectratio=1610]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%%%%%%%
+\usepackage{hyperref}
+% \usepackage{layout}
+% \usepackage{lipsum}
+%%%%%%%
+\usetheme[% Complete settings. Default value in []
+% titleimagecolor=red,       % [gray], darkgray, red, blue, green
+% titleimagemargin=2mm,      % Distance [2mm]    Frame around title page image
+% navigationsymbols=false,   % true   / [false]  Navigation symbols in the foot
+mathseriffont=false,       % true   / [false]  Serif / non-serif math fonts
+% foot=true,                 % true / [false]    Footline or not
+% slidenumnofoot=true,       % [true]   / false  Keep slide num even when foot=false
+% blackenumeratenumber=true, % [true] / false    Black enumerate numbers, o.w. Lund bronze
+% blackitemmark=false,       % true   / [false]  Black item marks, o.w. Lund bronze
+% defaultfont=false,         % true   / [false]  Falls back to default beamer fonts
+% sectionframe=true,
+% centeralign = true,      % true/[false]  Vertically alignes text on the slide. Othewise top aligned (default)
+% titleline = true,    % true/[false] line to separete the title from the text
+%%%%%%%%%% Logo
+% footlogo=false,             % [true] / false    Put LU logo to the right in footer (LU style)
+% logo=LU,
+% logolang = swe,%  swe/[eng] language for logo
+logocol=neg,   % RGB/BW/neg  
+% LUseal = false, %% [true]/false LU sigill i nedre högra hörnet
+%%%%%%%%%%% Template versions
+% LTHbg = true,   % true/[false]  Gray backgruond on slides (in LTH template)
+LTHtemplate,    % LTH version of template, overrides and sets logo=LTH, footlogo=false, LUseal=false, LTHbg=true
+%%%%%%%%%%% Old (obsolete,  Keep for compability)
+%%%% logoBW = true,          % true/[false] Print logo in B/W or color     ------------- Obsolete.  Keep for compability
+%%%%  LTHlogo=false,             % true   / [false]  Use LTH logo instead of LU on title and end pages.   ------------- Obsolete. Keep for compability
+%%%%% english=false,              % [true] / false    English / Swedish logo   ------------- Obsolete. Keep for compability
+]{ulund}
+%%%%%%%%%%%%%%%%%%%%% Layout commands 
+%%%% Foot
+% \ulundfootleft{\insertshortauthor}
+% \ulundfootmid{\insertshorttitle}
+% \ulundfootright{\insertframenumber}% {\insertframenumber:\inserttotalframenumber}
+%%%% Titleimage
+%\titleimage{example-image} % Replaces the LU image.
+\titleimage{Fikapaus}% There are a couple of images together with the sty-files
+%%%% Redefine LTH background color
+%5 Default RGB: 216,212,207
+%\definecolor{LTHgrey}{RGB}{200,200,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[ulund beamer]{ulund beamer template, LTH}
+\author[S. Höst]{%
+  Stefan Höst\newline
+  Dept. of EIT, Lund University}
+%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{verbatim}
+%%%%%%%%%%%%% Verbatim code box
+\usepackage[skins,listings]{tcolorbox}
+\tcbuselibrary{listingsutf8}
+\lstdefinestyle{CodeStyle}{basicstyle = \ttfamily}
+\newtcblisting{CodeBox}[2][]{% Only code
+  colframe=black,
+  colback=white,
+  arc=1pt,
+  boxrule=0.5pt,
+  top=0mm,bottom=0pt,left=0pt,
+  colbacktitle=gray!40,
+  coltitle=black,
+  fonttitle=\sffamily,
+  listing only,
+  title=#2,#1}
+%%%%%%%%%%%%%%%%%%%%%
+%% Commands
+\def\txtbs{\symbol{92}}
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]% Use plain to suppress footline box
+  \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Beamer template: ulund for LTH}
+  This file is a short introduction to the beamer template \texttt{ulund}, an attempt to mimic Lund University's ppt template in \LaTeX\ beamer.
+
+  Here the LTH version is used
+  %\includegraphics[width=10mm]{example-image}
+  
+Below follows:
+\begin{itemize}
+\item A short introduction to the implemented options in the template. 
+\item Some examples
+%\item Contact information for bug report
+\end{itemize}
+
+/Stefan Höst
+\end{frame}
+
+
+%%%%%%%%%%%%%%%
+\section{Short manual}
+
+%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Beamer template: ulund}
+  Start by including the beamer template \texttt{ulund}. The preamble for this document is essentially: 
+\begin{CodeBox}{}
+\documentclass[aspectratio=1610]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usetheme[LTHtemplate, logocol=neg]{ulund}
+\titleimage{Fikapaus}
+\title[ulund beamer]{ulund beamer template, LTH}
+\author[S. Höst]{%
+  Stefan Höst\newline
+  Dept. of EIT, Lund University}
+\begin{document}
+\end{CodeBox}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{Options}
+  The ulund theme comes with some options, as a comma separated list, set with
+  \texttt{\txtbs usetheme[<options>]\{ulund\}}.\newline
+  The options are (default value in [\ ]):
+  \begin{itemize}
+  \item \texttt{titleimagecolor=\{[gray], darkgray, red, blue, green\}}\newline
+    Background color of the default title frame and section frame.\newline
+    Color can be changed with the commnad \texttt{\txtbs titleimagecolor\{<color>\}}.
+  \item \texttt{titleimagemargin=<distance>} \newline
+    White frame around page, default 2 mm.\newline
+    Not more than 4 mm if you use logo in the footer
+  \item \texttt{navigationsymbols=\{true, [false]\}}\newline
+    Beamer navigation symbols in the footer. Default off
+  \item \texttt{mathseriffont=\{true, [false]\}}\newline
+    Serif math fonts
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{Options (cont'd)}
+  \begin{itemize}
+  \item \texttt{foot=\{true, [false]\}}\newline
+    Print footer with pagenum, title and author. Default this is turned off
+  \item \texttt{slidenumnofoot=\{[true], false]\}}\newline
+    When \texttt{foot=false}, still print slide num (lower left). Default on
+  \item \texttt{blackenumeratenumber=\{[true], false\}}\newline
+    Black enumerate numbers, otherwise Lund bronze.
+  \item \texttt{blackitemmark=\{true, [false]\}}\newline
+    Black item marks, otherwise Lund bronze
+  \item \texttt{defaultfont=\{true, [false]\}}\newline
+    Falls back to default beamer fonts, otherwise Palatino, Helvetica, Courier
+  \item \texttt{sectionframe=\{[true], false\}}\newline
+    Print section frame for each section. 
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{Options (logo)}
+  \begin{itemize}
+  \item \texttt{logo=\{[LU],LTH\}}\newline
+    Decide which logo to use. Default is LU. \newline
+    Todo: Implement logo choise for Helsingborg, N-fak and Nano Lund
+  \item \texttt{logocol=\{BW,[RGB],neg\}}\newline
+    Black/white, color or negative (white). For \texttt{BW} and \texttt{RGB} the same logo is used on the title page and the end page, but for \texttt{neg} the end page logo is in color (\texttt{RGB}).
+  \item \texttt{logolang=\{[eng],swe\}}\newline
+    English or Swedish logo text
+  \item \texttt{LUseal=\{[true],false\}}\newline
+    LU seal on lower right corner of title and section page
+  \item \texttt{footlogo=\{[true],false\}}\newline
+    Print the LU logo in the right part of the foot
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{Options (LTH version)}
+  There are some differences in how diffrenet faculties want their expression of the template. The default is with the LU logo in color, with seal on title page and logo in the foot. In the LTH template apart from changig the logo, the seal and the logo in the foot is removed. There is also a gray background on each page. To implement this there are two options:
+  \begin{itemize}
+  \item \texttt{LTHbg=\{true,[false]\}}\newline
+    Prints the LTH gray background on each page. 
+  \item \texttt{LTHtemplate}, given without argument. (it is \texttt{\{true,false\}} and the option sets it to \texttt{true}).\newline
+    This sets (and overrides other settings):
+    \begin{itemize}
+    \item \texttt{logo=LTH}
+    \item \texttt{footlogo=false}
+    \item \texttt{LUseal=false}
+    \item \texttt{LTHbg=true}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%% 
+\begin{frame}%[fragile]
+  \frametitle{Options (Old)}
+  This template has been around for some time but reasently been updated to the latest versions of the template. This has replaced some of the old options with more general, mainly to open for more versions of the logo. The following options are obsolete but should still work in the new implementation. They are kept to preserve backwords compatibility. 
+  \begin{itemize}
+  \item \texttt{english=\{[true], false\}}\newline
+    English logo. otherwise Swedish.
+  \item \texttt{LTHlogo=\{true, [false]\}}\newline
+    Use LTH logo on front and end page, and LU logo in foot. Otherwise LU logo.
+  \item \texttt{logoBW=\{true,[false]\}}\newpage
+    Use black/white logo. Otherwise color
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{Footer}
+  If \texttt{foot=true} it will print a footer on each page. This was given in early versions of LUs template but has been removed several years ago. It is still an option here, mainly for comapatility reaseons. In the foot there are three positions; left, mid and right. The default is
+  \par\strut\par
+  \rule{2em}{0pt}%
+  \begin{tikzpicture}
+    \draw[thin,color=lundbronze] (0,0) -- (12,0)
+    node[pos=0,anchor=north west,inner sep=0pt,yshift=-5pt,black]{\texttt{<short author>}}
+    node[pos=0.5,anchor=north,inner sep=0pt,yshift=-5pt,black]{\texttt{<short title>}}
+    node[pos=1,anchor=north east,inner sep=0pt,yshift=-5pt,black]{\texttt{<frame number>}};
+  \end{tikzpicture}
+  \par\strut\par
+  To set other contents use the commands (here with default value)
+  \begin{itemize}
+  \item \texttt{\txtbs ulundfootleft\{\txtbs insertshortauthor\}}
+  \item \texttt{\txtbs ulundfootmid\{\txtbs insertshorttitle\}}
+  \item \texttt{\txtbs ulundfootright\{\txtbs insertframenumber\}}\newline
+  To get total number of frames in the page number use e.g. \texttt{\txtbs insertframenumber:\txtbs inserttotalframenumber}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Title page}
+  The title page is printed with the command \texttt{\txtbs titlepage} inside a frame.
+\begin{CodeBox}{}
+\begin{frame}[plain]% plain removes header and footer
+  \titlepage
+\end{frame}% (*)
+\end{CodeBox}
+\verb|(*)|{\footnotesize The \% is needed to make the verbatim listing happy. Without it I get an error. Not sure why.}
+
+\strut\par
+
+The title page has by deault a coloured background, the chose logo in the left upper corner, the seal in the lower right corner, and the title and author in a white box. Instead of the standard monochrome background, any image can be used. Include by setting \texttt{\txtbs titleimage\{<image>\}}, e.g. \texttt{\txtbs titleimage\{titlepictureGroup\}} as on the next frame. Reset with \texttt{\txtbs titleimage\{\}}. The image is printed scaled and cropped so it fits the whole page, with aligned to the lower left corner.
+\par\strut\par
+If you have a dark image it is recommended to use the option \texttt{logocol=neg}. 
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\titleimage{Fikapaus}
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+\titleimage{}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{Installation}
+  \textbf{TeXlive}\newline
+  To find the root of the local TeX-tree, use the command\newline
+  \texttt{kpsewhich -var-value=TEXMFHOME}\newline
+  If the directory does not exist, create it. Then unpack the files into \texttt{<TEXMFHOME>/tex/latex/beamer/themes/}. That means for 
+  \begin{itemize}
+  \item MAC: \texttt{\~{}/Library/texmf/tex/latex/beamer/themes/}
+  \item Linux: \texttt{\~{}/Library/texmf/tex/latex/beamer/themes/}
+  \item Windows: \texttt{<user>\txtbs texmf\txtbs tex\txtbs latex\txtbs beamer\txtbs themes\txtbs}
+  \end{itemize}
+  \textbf{MikTeX}
+  \begin{itemize}
+  \item Windows: ?
+  \end{itemize}
+  \par\strut\par
+  For more details see: \href{https://tex.stackexchange.com/q/1137/95544}{tex.stackexchange.com/q/1137/95544}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}%[fragile]
+  \frametitle{To do}
+  %\framesubtitle{(Some day)}
+  There are allways more to do and more stuff to include in the template and the examples. Some things are: 
+  \begin{itemize}
+  \item Command \texttt{\txtbs sectionimage\{\}} to put optional image on section slide. It can aslo be to put images on normal slides as backgrounds. 
+  \item Fill parts of slide, say half or one third, from top to bottom with an image. Or several images. This can probably be an example, showin how to find the corners. 
+  \item Options for other logos than LU and LTH. I will try to include Campus Helsingborg, N-fak, and NanoLund, since I have those logos. If there is a demand for more let me know. It is fairly straight forward, but it does not write itself.
+  \item Command for second logo. Or an optional logo and put whatever you like there. It can even be by an example to shouw how to put whatever as a logo.
+  \end{itemize}
+  Questions, comments and suggestions: \href{mailto:stefan.host@eit.lth.se}{stefan.host@eit.lth.se}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\titleimagecolor{green}
+\section{Examples}
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Theorems and other blocked material (1)}
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.45\textwidth}
+\begin{CodeBox}{}
+\begin{definition}[def]
+  Lorem ipsum dolor ...
+\end{definition}
+\end{CodeBox}
+
+\begin{CodeBox}{}
+\begin{theorem}[theorem]
+  Lorem ipsum dolor ...
+\end{theorem}
+\end{CodeBox}
+
+\begin{CodeBox}{}
+\begin{example}[example]
+  Lorem ipsum dolor ...
+\end{example}
+\end{CodeBox}
+    \end{column}\hskip 0.04\textwidth%
+    \begin{column}{0.5\textwidth}
+  \begin{definition}[def]
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+  \end{definition}
+  \begin{theorem}[theorem]
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+  \end{theorem}
+  \begin{example}[example]
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+  \end{example}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Theorems and other blocked material (2)}
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.45\textwidth}
+\begin{CodeBox}{}
+\begin{lemma}[lemma]
+  Lorem ipsum dolor ...
+\end{lemma}
+\end{CodeBox}
+
+\begin{CodeBox}{}
+\begin{corollary}[corollary]
+  Lorem ipsum dolor ...
+\end{corollary}
+\end{CodeBox}
+    \end{column}\hskip 0.04\textwidth%
+    \begin{column}{0.5\textwidth}
+      \begin{lemma}[lemma]
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      \end{lemma}
+      \begin{corollary}[corollary]
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      \end{corollary}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Theorems and other blocked material (3)}
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.45\textwidth}
+\begin{CodeBox}{}
+\begin{alertblock}{Alert}
+  Lorem ipsum dolor ...
+\end{alertblock}
+\end{CodeBox}
+
+\begin{CodeBox}{}
+\begin{block}{Block}
+  Lorem ipsum dolor ...
+\end{block}
+\end{CodeBox}
+
+\begin{CodeBox}{}
+\begin{exampleblock}{Example}
+  Lorem ipsum dolor ...
+\end{exampleblock}
+\end{CodeBox}
+\end{column}\hskip 0.04\textwidth%
+\begin{column}{0.5\textwidth}
+  \begin{alertblock}{Alert}
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  \end{alertblock}
+  \begin{block}{Block}
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  \end{block}
+  \begin{exampleblock}{Example}
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  \end{exampleblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Items and such}
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.5\textwidth}
+\begin{CodeBox}{}
+\begin{itemize}
+\item First item level
+  \begin{itemize}
+  \item Second item level
+    \begin{itemize}
+    \item Third item level
+    \end{itemize}
+  \end{itemize}
+\item<alert@1> Alert
+\item<lualert@1> LU-alert
+\end{itemize}
+
+[Same with enumerate]
+\end{CodeBox}
+    \end{column}%
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+      \item First item level
+        \begin{itemize}
+        \item Second item level
+          \begin{itemize}
+          \item Third item level
+          \end{itemize}
+        \end{itemize}
+      \item<alert@1> Alert
+      \item<lualert@1> LU-alert (alert bullet)
+      \end{itemize}
+      \begin{enumerate}
+      \item First enumerate level
+        \begin{enumerate}
+        \item Second enumerate level
+          \begin{enumerate}
+          \item Third enumerate level
+          \end{enumerate}
+        \end{enumerate}
+      \item<alert@1> Alert
+      \item<lualert@1> LU-alert (alert number)
+      \end{enumerate}      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Picture in column}
+  \begin{columns}[onlytextwidth]
+    \begin{column}[c]{0.3\linewidth}
+      \columnpicture{titlepictureGroup}
+    \end{column}%
+    \begin{column}[c]{0.65\linewidth}
+      In the LU templete there are examples of slides with one column occupied by an image. This frame:
+\begin{CodeBox}{}
+\begin{columns}[onlytextwidth]
+  \begin{column}{0.3\textwidth}
+    \columnpicture{titlepictureGroup}
+  \end{column}
+\end{columns}%
+\begin{column}{0.65\textwidth}
+  [Text]
+\end{column}
+\end{CodeBox}      
+A picture like this is for decoration. Important pictures should be included the normal way.
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{End page}
+  Finally, the end of the presentation should state where you are from:
+\begin{CodeBox}{}
+\begin{frame}[plain]
+  \endpage
+\end{frame}%
+\end{CodeBox}
+  See next slide
+  %\par\strut\par
+  %\verb|(*)|{\footnotesize \verb|frame| is deliberately miss-spelled due to problems with beamer and verbatim. It should be \verb|frame|. I will solve it some day...}
+  \begin{displaymath}
+    \sum_{n\inZ^+}i_n
+  \end{displaymath}
+\end{frame}
+
+%%%%%%%%%%%% End frame
+\begin{frame}[plain]
+  \endpage
+\end{frame}
+
+%%%%%%%%%%%
+\end{document}
