@@ -1,0 +1,119 @@
+---
+title: "AI in Sustainability Communication: Implications for Research and Education"
+subtitle: "**Topic:** _The Adoption of AI in Strategic Communications;_ <br/>**Subtopic:** _The Future Impact of AI in Strategic Communications and PR Education_"
+author: 
+  - name: Nils Holmberg (nils.holmberg@iko.lu.se)
+    email: nils.holmberg@iko.lu.se
+  - name: Jörgen Eksell (jorgen.eksell@iko.lu.se)
+    email: jorgen.eksell@iko.lu.se
+date: today
+#bibliography: /home/sol-nhl/rnd/r/literature/bibs/sustainability-communication.bib
+bibliography: /home/sol-nhl/rnd/r/literature/bibs/open-science-methods.bib
+bibliographystyle: apa
+format:
+  pdf:
+    papersize: a4
+    toc: false
+    number-sections: true
+  html:
+    self-contained: true
+    toc: true
+    number-sections: true
+    other-links:
+      - text: MS Word
+        href: https://lunduniversityo365.sharepoint.com/:w:/r/sites/Sustainabilitycommunication15credits/Delade%20dokument/General/book-chapter/abstract-250711.docx?d=wc6a4479be7d54669b164e44b7da65849&csf=1&web=1&e=4P5by6
+        icon: file-word
+      - text: PDF
+        href: https://nils-holmberg.github.io/socs-qmd/web/abstract-250711.pdf
+        icon: file-pdf
+    theme: materia
+  docx:
+    toc: false
+    number-sections: false
+---
+
+## AI and Sustainability Communication Research (4000 words, 8 pages)
+
+### Introduction (1000 words, 2 pages)
+
+  - background, research methods
+  - analytical vs. generative ai
+
+### Theory and Reseach (500 words)
+
+- communication model
+
+  - sender, message, receiver
+
+- quantitative content analysis
+
+  - human coding
+
+- media effects research
+  - valkenburg
+
+### Research Questions (500 words)
+
+- sustainability communication
+  - computational content analysis, natural language processing, computer vision
+  - cognitive communication effects
+
+## Computational Content Analysis (1000 words)
+
+- cca
+
+### Methods (500 words)
+
+- data collection
+e.g. web scraping
+
+- data analysis
+natural language processing, computer vision
+
+### Results (500 words)
+
+- sustainability communication
+
+- feature detection and content indicators
+e.g. greenwashing
+
+## Cognitive Communication Effects (1000 words)
+
+- cce
+
+### Methods
+
+- data collection
+e.g. web behavior tracking, click data, neuromarketing, virtual research study participants, human behavior models
+
+- data analysis
+automated multiple ab testing
+
+### Results
+
+- Microtargeting: Personalized messaging to specific groups
+
+- Psychological operations: Influencing through cognitive manipulation
+
+- communication inoculation
+
+## Discussion (1000 words)
+
+### analytical ai and sustainability communication research
+
+### generative ai and sustainability communication research
+
+
+## AI and Sustainability Communication Education (4000 words)
+
+### intro (1000 words, 2 pages)
+
+  - background, research methods
+  - analytical vs. generative ai
+
+
+
+
+
+
+
