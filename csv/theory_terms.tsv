@@ -1,0 +1,11 @@
+Theory	Type	Term	Count_Shell	Count_WWF
+Stakeholder	Economic, Regulatory	investment	45	2
+Stakeholder	Economic, Regulatory	emission	50	8
+Stakeholder	Economic, Regulatory	energy	60	10
+Stakeholder	Community, Environment	donor	3	40
+Stakeholder	Community, Environment	conservation	15	55
+Framing	Opportunity	innovation	40	5
+Framing	Opportunity	technology	50	2
+Framing	Moral	duty	2	25
+Framing	Moral	crisis	8	20
+Framing	Moral	action	10	35
