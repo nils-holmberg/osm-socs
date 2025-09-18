@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1755760295.19895 "talk.tex" "talk.pdf" "talk" 1755760297.05682 0
+["pdflatex"] 1757417583.7375 "talk.tex" "talk.pdf" "talk" 1757417585.89472 0
   "../../fig/table_framing_type_term.png" 1755756281.5554 50307 c94b083d65f0e49872279a90b7e91ea7 ""
   "../../fig/unit_circle_vectors.png" 1754038163.19341 169444 9c372da8d80b78c619ac765e3d52faa5 ""
-  "/etc/texmf/web2c/texmf.cnf" 1747205627.34343 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/etc/texmf/web2c/texmf.cnf" 1756626849.63494 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -218,8 +218,8 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1727642399 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1747205760 5306818 1fa401c76333135f70f9b590f03b90db ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1747205798 1928192 d90b4073e122e6666ea8a7bfaf754d76 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1756816695 5306818 1fa401c76333135f70f9b590f03b90db ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1756816703 1928193 8228e9c7a9c5ebccba321bb66cf883d9 ""
   "Pictures/titlepictureLUgray.png" 1753957598 911517 bf92f0e4b2a00c8668291b81a93a7cab ""
   "beamercolorthemeulund.sty" 1753957598 3748 892e90f13da5fc3dae4170df21b358cd ""
   "beamerfontthemeulund.sty" 1753957598 1334 ebbcd70dc61819310e2f0054e0f09289 ""
@@ -228,9 +228,9 @@
   "beamerthemeulund.sty" 1753957598 7186 4e76222599081f8ac4ef8562fa558022 ""
   "frog.jpg" 1753957598 97080 665777aa6c7c48794db02f5d69ccc24a ""
   "logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB.png" 1753957604 81171 22b3646e59f567a752239fb251b719cf ""
-  "talk.aux" 1755760296.96042 1851 69a9a3b947b72d684ec005ac993f7932 "pdflatex"
-  "talk.nav" 1755760296.96142 1202 1d50c3857c7a64ab3c9b4eb4b26f9a97 "pdflatex"
-  "talk.out" 1755760295.91243 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "talk.aux" 1757417585.80199 1851 69a9a3b947b72d684ec005ac993f7932 "pdflatex"
+  "talk.nav" 1757417585.80199 1202 1d50c3857c7a64ab3c9b4eb4b26f9a97 "pdflatex"
+  "talk.out" 1757417584.65801 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "talk.tex" 1755759690.08711 6572 52f567d87c1f0adec74702952e8e5394 ""
   (generated)
   "talk.aux"
