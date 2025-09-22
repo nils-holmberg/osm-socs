@@ -1,7 +1,12 @@
 # Fdb version 4
-["pdflatex"] 1758205350.03306 "talk.tex" "talk.pdf" "talk" 1758205352.3355 0
+["pdflatex"] 1758549104.62263 "talk.tex" "talk.pdf" "talk" 1758549107.14692 0
+  "../../fig/euprera-2up-1200.png" 1758548814.12094 2429271 bcc2e2c1a8e376752711aea321f469c9 ""
+  "../../fig/figure1.png" 1758545732.22628 48065 0007a12ffceed019de30d6f1260227c8 ""
+  "../../fig/figure2.png" 1758545743.44605 31356 ddcf97bb389affb5f40fa24a187a72d3 ""
+  "../../fig/heatmap_framing.png" 1755783453.77109 130344 40c5fb8c7c7bb0b21f66bc7ece3a3fc9 ""
   "../../fig/heatmap_stakeholder.png" 1755783453.54709 155253 ac34997bb3373db3ba60b741d2042e3d ""
   "../../fig/table_f_tight.png" 1758203378.33159 28087 f4973f73325e2f8e664b59577dc37499 ""
+  "../../fig/table_s_tight.png" 1758203378.33159 47913 d8e5f280017d62397513c62a9a5e7a77 ""
   "../../fig/unit_circle_vectors.png" 1754038163.19341 169444 9c372da8d80b78c619ac765e3d52faa5 ""
   "/etc/texmf/web2c/texmf.cnf" 1756626849.63494 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -227,12 +232,11 @@
   "beamerinnerthemeulund.sty" 1753957598 10197 900ccfdf9031f1081a610e8c3a70fcc8 ""
   "beamerouterthemeulund.sty" 1753957598 5669 94cf2186ae1b75b3018f7bdbf8d97fbf ""
   "beamerthemeulund.sty" 1753957598 7186 4e76222599081f8ac4ef8562fa558022 ""
-  "frog.jpg" 1753957598 97080 665777aa6c7c48794db02f5d69ccc24a ""
   "logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB.png" 1753957604 81171 22b3646e59f567a752239fb251b719cf ""
-  "talk.aux" 1758205352.23783 1851 69a9a3b947b72d684ec005ac993f7932 "pdflatex"
-  "talk.nav" 1758205352.23783 1202 1d50c3857c7a64ab3c9b4eb4b26f9a97 "pdflatex"
-  "talk.out" 1758205350.89785 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "talk.tex" 1758205339.62207 7820 558e2ecf47e1f38c261f03572c07c58e ""
+  "talk.aux" 1758549107.06782 1980 cd70c959e6c2574e4e42ddae5818e3e9 "pdflatex"
+  "talk.nav" 1758549107.07182 1295 6613b1ca7d9b3db42a4da034ba88e851 "pdflatex"
+  "talk.out" 1758549105.22385 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "talk.tex" 1758548814.12094 9682 c693b76e0397dcf62aa5ab820557fbc0 ""
   (generated)
   "talk.aux"
   "talk.log"
