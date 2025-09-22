@@ -40,6 +40,33 @@
 \begin{frame}
   \frametitle{Stakeholder Theory Expectations}
   \begin{columns}[t]
+    \begin{column}[t]{0.5\textwidth}
+      \begin{itemize}
+        \item Message shaped by stakeholders
+        \item Shell: investors/regulators = "investment", etc.
+        \item WWF: donors/public = "donor", "nature"
+        \item Shell: data-driven; WWF: community focus
+        \item Predictable via lexical/semantic analysis
+      \end{itemize}
+    \end{column}
+    \begin{column}[t]{0.5\textwidth}
+      \vspace*{0pt}
+      \includegraphics[
+        width=\linewidth,
+        height=0.6\textheight,
+        keepaspectratio=false,
+        trim=0 0 0 0,
+        clip
+      ]{../../fig/table_s_tight.png}
+      (Insert graphic: stakeholder mapping)
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\iffalse
+\begin{frame}
+  \frametitle{Stakeholder Theory Expectations}
+  \begin{columns}[t]
     \begin{column}[t]{0.6\textwidth}
       \begin{itemize}
         \item Message shaped by stakeholders
@@ -57,7 +84,6 @@
   \end{columns}
 \end{frame}
 
-\iffalse
 \begin{frame}
   \frametitle{Framing Theory Expectations}
   \begin{columns}
@@ -115,7 +141,7 @@
 \begin{frame}
   \frametitle{Data \& Methodology}
   \begin{columns}
-    \begin{column}{0.6\textwidth}
+    \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item 7 webpages each from Shell and WWF
         \item Cleaned HTML, kept main content
@@ -124,16 +150,9 @@
         \item Semantic: BERT embeddings + similarity
       \end{itemize}
     \end{column}
-    \begin{column}{0.4\textwidth}
+    \begin{column}{0.5\textwidth}
       \vspace*{0pt}
-      %\includegraphics[width=\linewidth]{../../fig/table_framing_type_term.png}
-      \includegraphics[
-        width=\linewidth,
-        %height=\textheight,
-        keepaspectratio=false,
-        trim=0 0 0 0,
-        clip
-      ]{../../fig/table_f_tight.png}
+      \includegraphics[width=\linewidth]{../../fig/unit_circle_vectors.png}
       (Insert NLP pipeline sketch)
     \end{column}
   \end{columns}
@@ -160,6 +179,32 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/heatmap_stakeholder.png}
+      (Insert frequency bar chart)
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lexical Analysis Results}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Shell: "energy", "emission", "investment"
+        \item WWF: "conservation", "donor", "nature"
+        \item Terms rarely overlap between orgs
+        \item Shell = tech \& opportunity; WWF = duty \& action
+        \item Clear lexical patterns match theory
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \vspace*{0pt}
+      \includegraphics[
+        width=\linewidth,
+        height=0.65\textheight,
+        keepaspectratio=false,
+        trim=0 0 0 0,
+        clip
+      ]{../../fig/heatmap_framing.png}
       (Insert frequency bar chart)
     \end{column}
   \end{columns}
