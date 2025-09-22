@@ -1,6 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1757417583.7375 "talk.tex" "talk.pdf" "talk" 1757417585.89472 0
-  "../../fig/table_framing_type_term.png" 1755756281.5554 50307 c94b083d65f0e49872279a90b7e91ea7 ""
+["pdflatex"] 1758205350.03306 "talk.tex" "talk.pdf" "talk" 1758205352.3355 0
+  "../../fig/heatmap_stakeholder.png" 1755783453.54709 155253 ac34997bb3373db3ba60b741d2042e3d ""
+  "../../fig/table_f_tight.png" 1758203378.33159 28087 f4973f73325e2f8e664b59577dc37499 ""
   "../../fig/unit_circle_vectors.png" 1754038163.19341 169444 9c372da8d80b78c619ac765e3d52faa5 ""
   "/etc/texmf/web2c/texmf.cnf" 1756626849.63494 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -228,10 +229,10 @@
   "beamerthemeulund.sty" 1753957598 7186 4e76222599081f8ac4ef8562fa558022 ""
   "frog.jpg" 1753957598 97080 665777aa6c7c48794db02f5d69ccc24a ""
   "logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB.png" 1753957604 81171 22b3646e59f567a752239fb251b719cf ""
-  "talk.aux" 1757417585.80199 1851 69a9a3b947b72d684ec005ac993f7932 "pdflatex"
-  "talk.nav" 1757417585.80199 1202 1d50c3857c7a64ab3c9b4eb4b26f9a97 "pdflatex"
-  "talk.out" 1757417584.65801 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "talk.tex" 1755759690.08711 6572 52f567d87c1f0adec74702952e8e5394 ""
+  "talk.aux" 1758205352.23783 1851 69a9a3b947b72d684ec005ac993f7932 "pdflatex"
+  "talk.nav" 1758205352.23783 1202 1d50c3857c7a64ab3c9b4eb4b26f9a97 "pdflatex"
+  "talk.out" 1758205350.89785 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "talk.tex" 1758205339.62207 7820 558e2ecf47e1f38c261f03572c07c58e ""
   (generated)
   "talk.aux"
   "talk.log"
