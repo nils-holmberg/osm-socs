@@ -159,7 +159,7 @@
     \begin{column}{0.5\textwidth}
       \vspace*{0pt}
       \includegraphics[width=\linewidth]{../../fig/unit_circle_vectors_arcs.png}
-      NLP pipeline sketch
+      (Insert NLP pipeline sketch)
     \end{column}
   \end{columns}
 \end{frame}
@@ -185,7 +185,7 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/heatmap_stakeholder.png}
-      Frequency bar chart
+      (Insert frequency bar chart)
     \end{column}
   \end{columns}
 \end{frame}
@@ -211,7 +211,7 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/heatmap_framing.png}
-      Frequency bar chart
+      (Insert frequency bar chart)
     \end{column}
   \end{columns}
 \end{frame}
@@ -237,7 +237,7 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/figure1.png}
-      Similarity heatmap
+      (Insert similarity heatmap)
     \end{column}
   \end{columns}
 \end{frame}
@@ -308,7 +308,7 @@
     \begin{column}{0.5\textwidth}
       \vspace*{0pt}
       \includegraphics[width=\linewidth]{../../fig/unit_circle_vectors_arcs.png}
-      Cloud or NLP infrastructure diagram
+      (Insert cloud or NLP infrastructure diagram)
     \end{column}
   \end{columns}
 \end{frame}
@@ -326,7 +326,7 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.4\textwidth}
-      Multimodal analysis diagram
+      (Insert multimodal analysis diagram)
     \end{column}
   \end{columns}
 \end{frame}
