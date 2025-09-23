@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1758611145.055 "talk.tex" "talk.pdf" "talk" 1758611147.81293 0
+["pdflatex"] 1758612439.03383 "talk.tex" "talk.pdf" "talk" 1758612441.63262 0
   "../../fig/euprera-2up-1200.png" 1758548814.12094 2429271 bcc2e2c1a8e376752711aea321f469c9 ""
   "../../fig/figure1.png" 1758545732.22628 48065 0007a12ffceed019de30d6f1260227c8 ""
   "../../fig/figure2.png" 1758545743.44605 31356 ddcf97bb389affb5f40fa24a187a72d3 ""
@@ -233,10 +233,10 @@
   "beamerouterthemeulund.sty" 1753957598 5669 94cf2186ae1b75b3018f7bdbf8d97fbf ""
   "beamerthemeulund.sty" 1753957598 7186 4e76222599081f8ac4ef8562fa558022 ""
   "logo/LU–tvaradig–digital/Eng/LundUniversity_C2line_RGB.png" 1753957604 81171 22b3646e59f567a752239fb251b719cf ""
-  "talk.aux" 1758611147.72098 1980 cd70c959e6c2574e4e42ddae5818e3e9 "pdflatex"
-  "talk.nav" 1758611147.72498 1295 6613b1ca7d9b3db42a4da034ba88e851 "pdflatex"
-  "talk.out" 1758611145.80897 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "talk.tex" 1758609446 9824 efdc830d2d483b70ba5b9e31ef2a1ca0 ""
+  "talk.aux" 1758612441.54564 1980 cd70c959e6c2574e4e42ddae5818e3e9 "pdflatex"
+  "talk.nav" 1758612441.54564 1295 6613b1ca7d9b3db42a4da034ba88e851 "pdflatex"
+  "talk.out" 1758612439.70569 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "talk.tex" 1758612422.69419 9842 7366ea5f80263db7f731e4a09c151119 ""
   (generated)
   "talk.aux"
   "talk.log"
