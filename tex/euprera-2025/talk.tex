@@ -25,8 +25,8 @@
         \item Sustainability websites = transparency + persuasion
         \item Signal legitimacy and engage stakeholders
         \item Shell = technical; WWF = emotional
-        \item Manual coding lacks scale/nuance
-        \item \textbf{Aim:} Use NLP to compare Shell vs WWF
+        \item Manual coding vs. scale/nuance
+        \item \textbf{Aim:} Use NLP to compare \\Shell vs WWF
       \end{itemize}
     \end{column}
     \begin{column}[t]{0.5\textwidth}
@@ -52,7 +52,7 @@
         \item Shell: investors/regulators = "investment", etc.
         \item WWF: donors/public = "donor", "nature"
         \item Shell: data-driven; WWF: community focus
-        \item Predictable via lexical/semantic analysis
+        \item \textbf{Expectations of lexical analysis}
       \end{itemize}
     \end{column}
     \begin{column}[t]{0.5\textwidth}
@@ -127,7 +127,7 @@
         \item Shell: optimistic "innovation" frame
         \item WWF: moral/problem frame ("action", "duty")
         \item Shell: business advantage; WWF: urgency
-        \item Detectable via framing terms
+        \item \textbf{Expectations of lexical analysis}
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -159,7 +159,7 @@
     \begin{column}{0.5\textwidth}
       \vspace*{0pt}
       \includegraphics[width=\linewidth]{../../fig/unit_circle_vectors_arcs.png}
-      NLP pipeline sketch
+      Cosine similarity of vectors
     \end{column}
   \end{columns}
 \end{frame}
@@ -185,7 +185,7 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/heatmap_stakeholder.png}
-      Frequency bar chart
+      Example stakeholder word counts
     \end{column}
   \end{columns}
 \end{frame}
@@ -195,11 +195,11 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item Shell: "energy", "emission", "investment"
-        \item WWF: "conservation", "donor", "nature"
-        \item Terms rarely overlap between orgs
-        \item Shell = tech \& opportunity; WWF = duty \& action
-        \item Clear lexical patterns match theory
+        \item Shell: "innovation", "technology"
+        \item WWF: "duty", "crisis", "action"
+        \item Terms contrast between orgs
+        \item \textbf{Shell = economic/regulatory \& opportunity}
+        \item \textbf{WWF = community/environment \& moral}
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -211,7 +211,7 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/heatmap_framing.png}
-      Frequency bar chart
+      Example framing word counts
     \end{column}
   \end{columns}
 \end{frame}
@@ -221,11 +221,12 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item Shell aligns with "investment", etc.
-        \item WWF aligns with "donor", "action"
-        \item Shell avg. stakeholder similarity = 0.26
-        \item WWF avg. framing similarity = 0.25
-        \item Semantic match confirms lexical trends
+        \item Theoretical terms vs. empirical sentences
+        \item Shell sentences align mostly with economic stakeholders and opportunity framing
+        \item WWF sentences align mostly with community stakeholders and moral framing
+        %\item Shell avg. stakeholder similarity = 0.26
+        %\item WWF avg. framing similarity = 0.25
+        %\item Semantic match confirms lexical trends
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -237,7 +238,7 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/figure1.png}
-      Similarity heatmap
+      Terms vs. sentences similarity
     \end{column}
   \end{columns}
 \end{frame}
@@ -250,8 +251,34 @@
         \item Shell confirms stakeholder focus
         \item WWF shows moral advocacy focus
         \item Shell = opportunity frame; WWF = moral frame
-        \item NLP helps refine both theories
-        \item Empirical grounding boosts explanatory power
+        \item NLP helps apply and refine both theories
+        \item NLP = replicable insight, not anecdotal
+        %\item Empirical grounding boosts explanatory power
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \vspace*{0pt}
+      \includegraphics[
+        width=\linewidth,
+        height=0.6\textheight,
+        keepaspectratio=false,
+        trim=0 0 0 0,
+        clip
+      ]{../../fig/2x2_matrix.png}
+      Concept map: theory + findings
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Communication Implications}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Overall content similarity to theories
+        \item Shell = competence; WWF = emotional appeal
+        \item Tailored messaging for each audience
+        \item Firms = clarify tech; NGOs = build urgency
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -263,31 +290,6 @@
         trim=0 0 0 0,
         clip
       ]{../../fig/figure2.png}
-      Concept map: theory + findings
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Communication Implications}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item Shell = competence; WWF = emotional appeal
-        \item Tailored messaging for each audience
-        \item NLP = replicable insight, not anecdotal
-        \item Firms = clarify tech; NGOs = build urgency
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \vspace*{0pt}
-      \includegraphics[
-        width=\linewidth,
-        height=0.6\textheight,
-        keepaspectratio=false,
-        trim=0 0 0 0,
-        clip
-      ]{../../fig/euprera-2up-1200.png}
       Icons: tech vs moral appeals
     \end{column}
   \end{columns}
@@ -326,7 +328,15 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.4\textwidth}
-      Multimodal analysis diagram
+      \vspace*{0pt}
+      \includegraphics[
+        width=\linewidth,
+        height=0.6\textheight,
+        keepaspectratio=false,
+        trim=0 0 0 0,
+        clip
+      ]{../../fig/euprera-2up-1200.png}
+      Multimodal analysis, multiple communication areas
     \end{column}
   \end{columns}
 \end{frame}
